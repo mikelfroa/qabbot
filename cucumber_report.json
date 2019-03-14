@@ -1,0 +1,901 @@
+[
+  {
+    "description": "    As a user I want to know all available taxis but I get some errors",
+    "keyword": "Feature",
+    "name": "Errors Gettings a taxi",
+    "line": 1,
+    "id": "errors-gettings-a-taxi",
+    "tags": [],
+    "uri": "features/GetTaxis.Errors.feature",
+    "elements": [
+      {
+        "id": "errors-gettings-a-taxi;get-all-cabs-from-an-incorrect-location",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Get all cabs from an incorrect location",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I add the path \"taxis/nonExistingLocation\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I use the method \"get\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the response code is 500",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3000000,
+              "error_message": "AssertionError: expected false to be truthy\n    at World.<anonymous> (/Users/mikel/Pruebas/qabbot/lib/steps/step.js:45:42)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "errors-gettings-a-taxi;get-all-cabs-from-an-incorrect-taxi-id",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Get all cabs from an incorrect taxi id",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I add the path \"taxis/Madrid/nonExistingTaxiId\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I use the method \"get\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the response code is 500",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "AssertionError: expected false to be truthy\n    at World.<anonymous> (/Users/mikel/Pruebas/qabbot/lib/steps/step.js:45:42)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    As a user I want to know all available taxis",
+    "keyword": "Feature",
+    "name": "Get Taxis",
+    "line": 1,
+    "id": "get-taxis",
+    "tags": [],
+    "uri": "features/GetTaxis.feature",
+    "elements": [
+      {
+        "id": "get-taxis;get-all-taxis",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Get all taxis",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I add the path \"taxis\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I use the method \"get\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the response code is 200",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "get-taxis;get-all-taxis-from-madrid",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Get all taxis from Madrid",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I add the path \"taxis/Madrid\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I use the method \"get\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the response code is 200",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the response contains \"Madrid\"",
+            "match": {
+              "location": "lib/steps/step.js:52"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "get-taxis;get-skoda4-taxi-from-madrid",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Get Skoda4 taxi from Madrid",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I add the path \"taxis/Madrid/Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I use the method \"get\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the response code is 200",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the response contains \"Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:52"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the response contains \"free\"",
+            "match": {
+              "location": "lib/steps/step.js:52"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    As a user I want to reserve a taxi but I get some errors",
+    "keyword": "Feature",
+    "name": "Errors Reserving a Taxi",
+    "line": 1,
+    "id": "errors-reserving-a-taxi",
+    "tags": [],
+    "uri": "features/ReseveTaxi.Errors.feature",
+    "elements": [
+      {
+        "id": "errors-reserving-a-taxi;reserve-a-non-existing-taxi",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Reserve a non existing taxi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I add the path \"taxis/Madrid/nonExixtingTaxi\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I use the method \"post\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\"state\": \"hired\"}",
+                "line": 8
+              }
+            ],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I set the body",
+            "match": {
+              "location": "lib/steps/step.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response code is 404",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "errors-reserving-a-taxi;reserve-a-taxi-with-empty-body",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Reserve a taxi with empty body",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I add the path \"taxis/Madrid/Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I use the method \"post\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the response code is 400",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "errors-reserving-a-taxi;reserve-a-taxi-with-incorrect-body",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Reserve a taxi with incorrect body",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I add the path \"taxis/Madrid/Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I use the method \"post\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\"state\": \"free\"}",
+                "line": 24
+              }
+            ],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I set the body",
+            "match": {
+              "location": "lib/steps/step.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the response code is 403",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    As a user I want to reserve a taxi",
+    "keyword": "Feature",
+    "name": "Reserve a Taxi",
+    "line": 1,
+    "id": "reserve-a-taxi",
+    "tags": [],
+    "uri": "features/ReseveTaxi.feature",
+    "elements": [
+      {
+        "id": "reserve-a-taxi;reserve-a-taxi",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Reserve a taxi",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I add the path \"taxis/Madrid/Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I use the method \"post\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\"state\": \"hired\"}",
+                "line": 8
+              }
+            ],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I set the body",
+            "match": {
+              "location": "lib/steps/step.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response code is 200",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the response contains \"Madrid\"",
+            "match": {
+              "location": "lib/steps/step.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the response contains \"Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:52"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the response contains \"hired\"",
+            "match": {
+              "location": "lib/steps/step.js:52"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "reserve-a-taxi;try-to-reserve-a-taxi-already-reserved",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Try to reserve a taxi already reserved",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "lib/steps/step.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I add the path \"taxis/Madrid/Skoda4\"",
+            "match": {
+              "location": "lib/steps/step.js:21"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I use the method \"post\"",
+            "match": {
+              "location": "lib/steps/step.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\"state\": \"hired\"}",
+                "line": 21
+              }
+            ],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I set the body",
+            "match": {
+              "location": "lib/steps/step.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I send the request",
+            "match": {
+              "location": "lib/steps/step.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "the response code is 403",
+            "match": {
+              "location": "lib/steps/step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
